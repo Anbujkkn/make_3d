@@ -82,7 +82,7 @@ export default function Home() {
   );
 
   /* ─── Dropzone ─── */
-  const accept =
+  const accept: Record<string, string[]> =
     mode === "image"
       ? { "image/png": [".png"], "image/jpeg": [".jpg", ".jpeg"] }
       : { "video/mp4": [".mp4"], "video/mpeg": [".mpeg"] };
