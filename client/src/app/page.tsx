@@ -82,10 +82,11 @@ export default function Home() {
   );
 
   /* ─── Dropzone ─── */
-  const accept: Record<string, string[]> =
+  const accept = (
     mode === "image"
       ? { "image/png": [".png"], "image/jpeg": [".jpg", ".jpeg"] }
-      : { "video/mp4": [".mp4"], "video/mpeg": [".mpeg"] };
+      : { "video/mp4": [".mp4"], "video/mpeg": [".mpeg"] }
+  ) as any;
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept,
