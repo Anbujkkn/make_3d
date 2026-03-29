@@ -1,0 +1,37 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background Glow Blob -->
+  <circle cx="50" cy="50" r="30" fill="rgba(139, 92, 246, 0.15)" filter="url(#neon)" />
+  
+  <!-- Isometric Hexagon (Outer Cube Boundaries) -->
+  <path d="M50 15 L80 32.5 L80 67.5 L50 85 L20 67.5 L20 32.5 Z" fill="none" stroke="url(#glow)" stroke-width="6" stroke-linejoin="round" filter="url(#neon)" />
+  
+  <!-- Inner Y-Axis / Star Lines -->
+  <path d="M50 15 L50 50 L80 67.5" fill="none" stroke="url(#glow)" stroke-width="4" stroke-linecap="round" />
+  <path d="M50 50 L20 67.5" fill="none" stroke="url(#glow)" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Outer Connection Nodes -->
+  <circle cx="50" cy="15" r="4" fill="#ffffff" />
+  <circle cx="80" cy="32.5" r="4" fill="#ffffff" />
+  <circle cx="80" cy="67.5" r="4" fill="#ffffff" />
+  <circle cx="50" cy="85" r="4" fill="#ffffff" />
+  <circle cx="20" cy="67.5" r="4" fill="#ffffff" />
+  <circle cx="20" cy="32.5" r="4" fill="#ffffff" />
+  
+  <!-- Center Power Node -->
+  <circle cx="50" cy="50" r="6" fill="#0ea5e9" filter="url(#neon)" />
+  <circle cx="50" cy="50" r="3" fill="#ffffff" />
+</svg>

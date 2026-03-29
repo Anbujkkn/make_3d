@@ -122,11 +122,14 @@ export default function Home() {
           className="glass flex flex-col gap-6 w-full max-w-sm sm:max-w-md pointer-events-auto relative z-10 sidebar-scroll overflow-y-auto"
         >
           {/* Header Branding */}
-          <div className="p-6 pb-2 border-b border-white/5">
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-1">
-              <span className="gradient-text">HARI's 3D </span>
-              <span className="text-foreground/90">Builder</span>
-            </h1>
+          <div className="p-6 pb-2 border-b border-white/5 flex flex-col gap-2">
+            <div className="flex items-center gap-3">
+              <img src="/logo.svg" alt="App Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_15px_rgba(139,92,246,0.5)] shrink-0" />
+              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-1">
+                <span className="gradient-text">HARI's 3D </span>
+                <span className="text-foreground/90">Builder</span>
+              </h1>
+            </div>
             <p className="text-xs sm:text-sm text-foreground/40 leading-relaxed max-w-xs">
               Transform 2D formats into breathtaking 3D meshes in seconds.
             </p>
